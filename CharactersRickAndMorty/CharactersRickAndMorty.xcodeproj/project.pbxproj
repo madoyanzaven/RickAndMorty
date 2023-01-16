@@ -16,6 +16,32 @@
 		D0227B5029757D080036D5C5 /* CharactersRickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B4F29757D080036D5C5 /* CharactersRickAndMortyTests.swift */; };
 		D0227B5A29757D080036D5C5 /* CharactersRickAndMortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B5929757D080036D5C5 /* CharactersRickAndMortyUITests.swift */; };
 		D0227B5C29757D080036D5C5 /* CharactersRickAndMortyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B5B29757D080036D5C5 /* CharactersRickAndMortyUITestsLaunchTests.swift */; };
+		D0227B6D2975818C0036D5C5 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B6C2975818C0036D5C5 /* Routing.swift */; };
+		D0227B6F297581B00036D5C5 /* Fetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B6E297581B00036D5C5 /* Fetching.swift */; };
+		D0227B72297581DA0036D5C5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D0227B71297581DA0036D5C5 /* RxCocoa */; };
+		D0227B74297581DA0036D5C5 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D0227B73297581DA0036D5C5 /* RxRelay */; };
+		D0227B76297581DA0036D5C5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D0227B75297581DA0036D5C5 /* RxSwift */; };
+		D0227B78297581F70036D5C5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B77297581F70036D5C5 /* HTTPMethod.swift */; };
+		D0227B7A2975820D0036D5C5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B792975820D0036D5C5 /* Service.swift */; };
+		D0227B7C2975822D0036D5C5 /* DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B7B2975822D0036D5C5 /* DataFetching.swift */; };
+		D0227B7E297582500036D5C5 /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B7D297582500036D5C5 /* Parsing.swift */; };
+		D0227B80297582690036D5C5 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B7F297582690036D5C5 /* CustomError.swift */; };
+		D0227B83297582A50036D5C5 /* URLSessionNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B82297582A50036D5C5 /* URLSessionNetworkManager.swift */; };
+		D0227B86297582F00036D5C5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D0227B85297582F00036D5C5 /* Swinject */; };
+		D0227B88297583090036D5C5 /* URLSessionNetworkManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B87297583090036D5C5 /* URLSessionNetworkManagerAssembly.swift */; };
+		D0227B8A297583210036D5C5 /* DataFetcherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B89297583210036D5C5 /* DataFetcherManager.swift */; };
+		D0227B8C2975833C0036D5C5 /* DataFetcherManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B8B2975833C0036D5C5 /* DataFetcherManagerAssembly.swift */; };
+		D0227B8E2975834F0036D5C5 /* DataFetcherManagerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B8D2975834F0036D5C5 /* DataFetcherManagerProvider.swift */; };
+		D0227B91297583D80036D5C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B90297583D80036D5C5 /* Constants.swift */; };
+		D0227B942975841A0036D5C5 /* DataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B932975841A0036D5C5 /* DataEncoding.swift */; };
+		D0227B962975842F0036D5C5 /* JsonEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B952975842F0036D5C5 /* JsonEncoder.swift */; };
+		D0227B98297584410036D5C5 /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B97297584410036D5C5 /* URLEncoder.swift */; };
+		D0227B9C297585290036D5C5 /* JsonFileFetcherAssemby.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B9B297585290036D5C5 /* JsonFileFetcherAssemby.swift */; };
+		D0227B9E297585460036D5C5 /* JsonDecoderParserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B9D297585460036D5C5 /* JsonDecoderParserAssembly.swift */; };
+		D0227BA0297585560036D5C5 /* JsonDecoderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227B9F297585560036D5C5 /* JsonDecoderParser.swift */; };
+		D0227BA2297585680036D5C5 /* JsonFileFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227BA1297585680036D5C5 /* JsonFileFetcher.swift */; };
+		D0227BA5297585E20036D5C5 /* Bundle+FetchingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227BA4297585E20036D5C5 /* Bundle+FetchingData.swift */; };
+		D0227BA729758CAD0036D5C5 /* Collection+Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227BA629758CAD0036D5C5 /* Collection+Index.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +75,28 @@
 		D0227B5529757D080036D5C5 /* CharactersRickAndMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharactersRickAndMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0227B5929757D080036D5C5 /* CharactersRickAndMortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRickAndMortyUITests.swift; sourceTree = "<group>"; };
 		D0227B5B29757D080036D5C5 /* CharactersRickAndMortyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRickAndMortyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0227B6C2975818C0036D5C5 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		D0227B6E297581B00036D5C5 /* Fetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetching.swift; sourceTree = "<group>"; };
+		D0227B77297581F70036D5C5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D0227B792975820D0036D5C5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		D0227B7B2975822D0036D5C5 /* DataFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetching.swift; sourceTree = "<group>"; };
+		D0227B7D297582500036D5C5 /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
+		D0227B7F297582690036D5C5 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		D0227B82297582A50036D5C5 /* URLSessionNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkManager.swift; sourceTree = "<group>"; };
+		D0227B87297583090036D5C5 /* URLSessionNetworkManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkManagerAssembly.swift; sourceTree = "<group>"; };
+		D0227B89297583210036D5C5 /* DataFetcherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherManager.swift; sourceTree = "<group>"; };
+		D0227B8B2975833C0036D5C5 /* DataFetcherManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherManagerAssembly.swift; sourceTree = "<group>"; };
+		D0227B8D2975834F0036D5C5 /* DataFetcherManagerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherManagerProvider.swift; sourceTree = "<group>"; };
+		D0227B90297583D80036D5C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D0227B932975841A0036D5C5 /* DataEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncoding.swift; sourceTree = "<group>"; };
+		D0227B952975842F0036D5C5 /* JsonEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonEncoder.swift; sourceTree = "<group>"; };
+		D0227B97297584410036D5C5 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
+		D0227B9B297585290036D5C5 /* JsonFileFetcherAssemby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileFetcherAssemby.swift; sourceTree = "<group>"; };
+		D0227B9D297585460036D5C5 /* JsonDecoderParserAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoderParserAssembly.swift; sourceTree = "<group>"; };
+		D0227B9F297585560036D5C5 /* JsonDecoderParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoderParser.swift; sourceTree = "<group>"; };
+		D0227BA1297585680036D5C5 /* JsonFileFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileFetcher.swift; sourceTree = "<group>"; };
+		D0227BA4297585E20036D5C5 /* Bundle+FetchingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+FetchingData.swift"; sourceTree = "<group>"; };
+		D0227BA629758CAD0036D5C5 /* Collection+Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Index.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +104,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0227B76297581DA0036D5C5 /* RxSwift in Frameworks */,
+				D0227B74297581DA0036D5C5 /* RxRelay in Frameworks */,
+				D0227B72297581DA0036D5C5 /* RxCocoa in Frameworks */,
+				D0227B86297582F00036D5C5 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +151,11 @@
 		D0227B3729757D070036D5C5 /* CharactersRickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				D0227B3829757D070036D5C5 /* AppDelegate.swift */,
-				D0227B3A29757D070036D5C5 /* SceneDelegate.swift */,
+				D0227B682975801F0036D5C5 /* BundleFiles */,
+				D0227B8F297583C80036D5C5 /* SupportingFiles */,
+				D0227B6A297581670036D5C5 /* Network */,
+				D0227B69297581230036D5C5 /* Screens */,
 				D0227B3C29757D070036D5C5 /* ViewController.swift */,
-				D0227B3E29757D070036D5C5 /* Main.storyboard */,
-				D0227B4129757D080036D5C5 /* Assets.xcassets */,
-				D0227B4329757D080036D5C5 /* LaunchScreen.storyboard */,
-				D0227B4629757D080036D5C5 /* Info.plist */,
 			);
 			path = CharactersRickAndMorty;
 			sourceTree = "<group>";
@@ -127,6 +177,110 @@
 			path = CharactersRickAndMortyUITests;
 			sourceTree = "<group>";
 		};
+		D0227B682975801F0036D5C5 /* BundleFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B3829757D070036D5C5 /* AppDelegate.swift */,
+				D0227B3A29757D070036D5C5 /* SceneDelegate.swift */,
+				D0227B3E29757D070036D5C5 /* Main.storyboard */,
+				D0227B4129757D080036D5C5 /* Assets.xcassets */,
+				D0227B4329757D080036D5C5 /* LaunchScreen.storyboard */,
+				D0227B4629757D080036D5C5 /* Info.plist */,
+			);
+			path = BundleFiles;
+			sourceTree = "<group>";
+		};
+		D0227B69297581230036D5C5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D0227B6A297581670036D5C5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B6B297581790036D5C5 /* Router */,
+				D0227B81297582930036D5C5 /* Managers */,
+				D0227B92297584070036D5C5 /* Encoder */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D0227B6B297581790036D5C5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B6C2975818C0036D5C5 /* Routing.swift */,
+				D0227B6E297581B00036D5C5 /* Fetching.swift */,
+				D0227B77297581F70036D5C5 /* HTTPMethod.swift */,
+				D0227B7B2975822D0036D5C5 /* DataFetching.swift */,
+				D0227B792975820D0036D5C5 /* Service.swift */,
+				D0227B7D297582500036D5C5 /* Parsing.swift */,
+				D0227B7F297582690036D5C5 /* CustomError.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D0227B81297582930036D5C5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B99297584FA0036D5C5 /* URLSessionManager */,
+				D0227B9A2975850B0036D5C5 /* JsonManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D0227B8F297583C80036D5C5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B90297583D80036D5C5 /* Constants.swift */,
+				D0227BA3297585C80036D5C5 /* Extension */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D0227B92297584070036D5C5 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B932975841A0036D5C5 /* DataEncoding.swift */,
+				D0227B952975842F0036D5C5 /* JsonEncoder.swift */,
+				D0227B97297584410036D5C5 /* URLEncoder.swift */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		D0227B99297584FA0036D5C5 /* URLSessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B82297582A50036D5C5 /* URLSessionNetworkManager.swift */,
+				D0227B87297583090036D5C5 /* URLSessionNetworkManagerAssembly.swift */,
+				D0227B89297583210036D5C5 /* DataFetcherManager.swift */,
+				D0227B8B2975833C0036D5C5 /* DataFetcherManagerAssembly.swift */,
+				D0227B8D2975834F0036D5C5 /* DataFetcherManagerProvider.swift */,
+			);
+			path = URLSessionManager;
+			sourceTree = "<group>";
+		};
+		D0227B9A2975850B0036D5C5 /* JsonManager */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B9B297585290036D5C5 /* JsonFileFetcherAssemby.swift */,
+				D0227B9D297585460036D5C5 /* JsonDecoderParserAssembly.swift */,
+				D0227B9F297585560036D5C5 /* JsonDecoderParser.swift */,
+				D0227BA1297585680036D5C5 /* JsonFileFetcher.swift */,
+			);
+			path = JsonManager;
+			sourceTree = "<group>";
+		};
+		D0227BA3297585C80036D5C5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D0227BA4297585E20036D5C5 /* Bundle+FetchingData.swift */,
+				D0227BA629758CAD0036D5C5 /* Collection+Index.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +297,12 @@
 			dependencies = (
 			);
 			name = CharactersRickAndMorty;
+			packageProductDependencies = (
+				D0227B71297581DA0036D5C5 /* RxCocoa */,
+				D0227B73297581DA0036D5C5 /* RxRelay */,
+				D0227B75297581DA0036D5C5 /* RxSwift */,
+				D0227B85297582F00036D5C5 /* Swinject */,
+			);
 			productName = CharactersRickAndMorty;
 			productReference = D0227B3529757D070036D5C5 /* CharactersRickAndMorty.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +375,10 @@
 				Base,
 			);
 			mainGroup = D0227B2C29757D070036D5C5;
+			packageReferences = (
+				D0227B70297581DA0036D5C5 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				D0227B84297582F00036D5C5 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = D0227B3629757D070036D5C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +422,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0227B9E297585460036D5C5 /* JsonDecoderParserAssembly.swift in Sources */,
+				D0227B6D2975818C0036D5C5 /* Routing.swift in Sources */,
+				D0227B7E297582500036D5C5 /* Parsing.swift in Sources */,
+				D0227BA5297585E20036D5C5 /* Bundle+FetchingData.swift in Sources */,
+				D0227B7A2975820D0036D5C5 /* Service.swift in Sources */,
+				D0227B6F297581B00036D5C5 /* Fetching.swift in Sources */,
+				D0227B98297584410036D5C5 /* URLEncoder.swift in Sources */,
+				D0227BA2297585680036D5C5 /* JsonFileFetcher.swift in Sources */,
+				D0227B78297581F70036D5C5 /* HTTPMethod.swift in Sources */,
+				D0227B9C297585290036D5C5 /* JsonFileFetcherAssemby.swift in Sources */,
+				D0227B8E2975834F0036D5C5 /* DataFetcherManagerProvider.swift in Sources */,
+				D0227B88297583090036D5C5 /* URLSessionNetworkManagerAssembly.swift in Sources */,
+				D0227B91297583D80036D5C5 /* Constants.swift in Sources */,
+				D0227B8C2975833C0036D5C5 /* DataFetcherManagerAssembly.swift in Sources */,
+				D0227B80297582690036D5C5 /* CustomError.swift in Sources */,
+				D0227BA0297585560036D5C5 /* JsonDecoderParser.swift in Sources */,
+				D0227B962975842F0036D5C5 /* JsonEncoder.swift in Sources */,
 				D0227B3D29757D070036D5C5 /* ViewController.swift in Sources */,
+				D0227B942975841A0036D5C5 /* DataEncoding.swift in Sources */,
 				D0227B3929757D070036D5C5 /* AppDelegate.swift in Sources */,
+				D0227B8A297583210036D5C5 /* DataFetcherManager.swift in Sources */,
 				D0227B3B29757D070036D5C5 /* SceneDelegate.swift in Sources */,
+				D0227B83297582A50036D5C5 /* URLSessionNetworkManager.swift in Sources */,
+				D0227BA729758CAD0036D5C5 /* Collection+Index.swift in Sources */,
+				D0227B7C2975822D0036D5C5 /* DataFetching.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +625,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LD82R5CD8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CharactersRickAndMorty/Info.plist;
+				INFOPLIST_FILE = CharactersRickAndMorty/BundleFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +653,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LD82R5CD8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CharactersRickAndMorty/Info.plist;
+				INFOPLIST_FILE = CharactersRickAndMorty/BundleFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -602,6 +788,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0227B70297581DA0036D5C5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		D0227B84297582F00036D5C5 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0227B71297581DA0036D5C5 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0227B70297581DA0036D5C5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D0227B73297581DA0036D5C5 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0227B70297581DA0036D5C5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		D0227B75297581DA0036D5C5 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0227B70297581DA0036D5C5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		D0227B85297582F00036D5C5 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0227B84297582F00036D5C5 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0227B2D29757D070036D5C5 /* Project object */;
 }
