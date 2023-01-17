@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import AlamofireImage
 
 protocol Setupable {
     associatedtype SetupModel
@@ -15,9 +16,32 @@ protocol Setupable {
 }
 
 final class CharacterListTableViewCell: UITableViewCell {
+    @IBOutlet private weak var cellContentView: UIView!
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var characterImageView: UIImageView!
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet private weak var statusInfoLabel: UILabel!
+    @IBOutlet private weak var locationNameLabel: UILabel!
+    @IBOutlet weak var origineNameLabel: UILabel!
 
     var disposeBag = DisposeBag()
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        backgroundColor = Constants.Colors.mainGray
+        selectionStyle = .none
+        cellContentView.layer.cornerRadius = 8
+        cellContentView.clipsToBounds = true
+        statusView.layer.cornerRadius = 5
+        statusView.clipsToBounds = true
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+    }
 
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -31,5 +55,15 @@ extension CharacterListTableViewCell: Setupable {
 
     func setup(with model: SetupModel) {
         nameLabel.text = model.name
+        statusInfoLabel.text = model.statusInfo
+        statusView.backgroundColor = model.characterStatusColor
+        locationNameLabel.text = model.locationName
+        origineNameLabel.text = model.origineName
+        
+        guard let imageUrl = model.imageUrl else { return }
+
+        DispatchQueue.main.async { [weak self] in
+            self?.characterImageView.af.setImage(withURL: imageUrl)
+        }
     }
 }

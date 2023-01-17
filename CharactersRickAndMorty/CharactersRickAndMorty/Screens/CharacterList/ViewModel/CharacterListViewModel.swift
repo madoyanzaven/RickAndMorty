@@ -42,7 +42,18 @@ final class CharacterListViewModel {
             onSuccess: { [weak self] response in
                 guard let strongSelf = self else { return }
 
-                let models = response.results.map { CharacterModel(name: $0.name)}
+                let models = response.results.map {
+                    CharacterModel(
+                    name: $0.name ?? "",
+                    imagePath: $0.image,
+                    status: $0.status ?? "",
+                    species: $0.species ?? "",
+                    location: Location(
+                        name: $0.location?.name),
+                    origin: Origin(
+                        name: $0.origin?.name)
+                    )
+                }
                 strongSelf.totalPages = response.info.pages
                 strongSelf.isLoading = false
                 strongSelf.currentPage += 1

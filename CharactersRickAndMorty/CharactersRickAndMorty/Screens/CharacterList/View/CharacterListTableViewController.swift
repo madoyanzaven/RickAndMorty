@@ -11,7 +11,8 @@ import RxSwift
 
 final class CharacterListTableViewController: UITableViewController {
     private let reuseIdentifier = "CharacterListTableViewCell"
-    
+    let cellSpacingHeight: CGFloat = 30
+
     // MARK: - Dependencies
     private let viewModel: CharacterListViewModel
     
@@ -32,7 +33,6 @@ final class CharacterListTableViewController: UITableViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
         registerTableView()
         bind()
@@ -54,9 +54,9 @@ final class CharacterListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 200
     }
-    
+
     // MARK: - UIScrollViewDelegate
     override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         guard !decelerate else { return }
@@ -70,12 +70,12 @@ final class CharacterListTableViewController: UITableViewController {
     
     // MARK: Private methods
     private func setupView() {
-        view.backgroundColor = .secondarySystemBackground
         title = viewModel.navigationTitle
     }
     
     private func registerTableView() {
         tableView.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        tableView.separatorStyle = .none
     }
     
     private func bind() {
