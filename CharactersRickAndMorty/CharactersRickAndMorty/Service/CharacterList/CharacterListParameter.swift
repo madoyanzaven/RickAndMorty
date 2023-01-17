@@ -13,7 +13,7 @@ struct CharacterListParameter: Routing {
 
 
     var api: Constants.API {
-        return .character
+        return .characterList
     }
 
     var parameters: [String: Any] {

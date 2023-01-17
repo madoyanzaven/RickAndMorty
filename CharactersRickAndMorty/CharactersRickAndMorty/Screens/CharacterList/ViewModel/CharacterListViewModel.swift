@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxRelay
 
-final class CharacterListViewModel {
+final class CharacterListViewModel: CharacterListBusinessRules {
     weak var coordinator : MainCoordinator!
     let updatedIndexPathBehaviorRelay: BehaviorRelay<[IndexPath]?> = BehaviorRelay(value: nil)
     let disposeBag = DisposeBag()
@@ -29,7 +29,7 @@ final class CharacterListViewModel {
         return characters
     }
     var pageNotOffset: Bool {
-        return totalPages >= currentPage
+        return isPageNotOffset(currentPage, totalPages)
     }
 
     init(inputs: CharacterListInputs) {
