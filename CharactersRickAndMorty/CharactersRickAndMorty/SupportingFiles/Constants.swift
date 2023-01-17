@@ -9,19 +9,19 @@ import UIKit
 
 enum Constants {
     enum API {
-        case character
+        case characterList
 
         var path: String {
             switch self {
-            case .character :
+            case .characterList :
                 return "/api/character"
             }
         }
 
         var jsonFile: String {
             switch self {
-            case .character:
-                return "UserList"
+            case .characterList:
+                return "CharacterList"
             }
         }
     }

@@ -66,4 +66,16 @@ enum CaracterStatus: String {
             return Constants.Colors.statusGray
         }
     }
+
+    var statusParameter: String {
+        switch self {
+        case .alive:
+        return "alive"
+        case .daed:
+            return "dead"
+        case .unknown:
+            return "unknown"
+        }
+    }
+
 }

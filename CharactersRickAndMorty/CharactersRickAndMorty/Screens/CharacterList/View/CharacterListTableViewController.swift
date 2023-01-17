@@ -11,7 +11,13 @@ import RxSwift
 
 final class CharacterListTableViewController: UITableViewController {
     private let reuseIdentifier = "CharacterListTableViewCell"
-    let cellSpacingHeight: CGFloat = 30
+    private lazy var segmentedControl: UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["All", "Alive", "Dead", "unknown"])
+        sc.selectedSegmentIndex = 0
+        sc.tintColor = .systemBlue
+        sc.backgroundColor = Constants.Colors.mainGray
+        sc.addTarget(self, action: #selector(handleSegmentedControlSwitch(_:)), for: .valueChanged)
+        return sc }()
 
     // MARK: - Dependencies
     private let viewModel: CharacterListViewModel
@@ -34,10 +40,12 @@ final class CharacterListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupSegmentedControl()
         registerTableView()
         bind()
         viewModel.loadCharacterList()
     }
+
     
     // MARK: UITableViewDataSource & UITableViewDelegate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,6 +79,25 @@ final class CharacterListTableViewController: UITableViewController {
     // MARK: Private methods
     private func setupView() {
         title = viewModel.navigationTitle
+    }
+
+    private func setupSegmentedControl() {
+        navigationItem.titleView = segmentedControl
+    }
+
+    @objc func handleSegmentedControlSwitch(_ segmentedControl: UISegmentedControl) {
+        switch(segmentedControl.selectedSegmentIndex) {
+        case 0:
+            viewModel.hundleSegmentAction(with: nil)
+        case 1:
+            viewModel.hundleSegmentAction(with: .alive)
+        case 2:
+            viewModel.hundleSegmentAction(with: .daed)
+        case 3:
+            viewModel.hundleSegmentAction(with: .unknown)
+        default:
+            break
+        }
     }
     
     private func registerTableView() {

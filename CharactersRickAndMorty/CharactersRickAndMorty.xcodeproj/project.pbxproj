@@ -126,6 +126,7 @@
 		D0227BCB2975C8E80036D5C5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		D0227BCD2975C93C0036D5C5 /* CharacterListServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListServiceAssembly.swift; sourceTree = "<group>"; };
 		D0227BCF2975C9C20036D5C5 /* CharacterListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListAssembly.swift; sourceTree = "<group>"; };
+		D0C317332976F9B800DCF2BB /* CharacterList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharacterList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +266,7 @@
 		D0227B8F297583C80036D5C5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D0C317322976F97200DCF2BB /* JsoneRespones */,
 				D0227B90297583D80036D5C5 /* Constants.swift */,
 				D0227BCB2975C8E80036D5C5 /* Environment.swift */,
 				D0227BA3297585C80036D5C5 /* Extension */,
@@ -403,6 +405,14 @@
 				D0227BCF2975C9C20036D5C5 /* CharacterListAssembly.swift */,
 			);
 			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		D0C317322976F97200DCF2BB /* JsoneRespones */ = {
+			isa = PBXGroup;
+			children = (
+				D0C317332976F9B800DCF2BB /* CharacterList.json */,
+			);
+			path = JsoneRespones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

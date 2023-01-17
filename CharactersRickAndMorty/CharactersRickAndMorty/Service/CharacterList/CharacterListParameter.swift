@@ -9,15 +9,20 @@ import Foundation
 
 struct CharacterListParameter: Routing {
     let page: Int
+    let status: CaracterStatus?
+
 
     var api: Constants.API {
         return .character
     }
 
     var parameters: [String: Any] {
-        let parameters: [String: Any] = [
+        var parameters: [String: Any] = [
             "page": page
         ]
+        if let status = status {
+            parameters["status"] = status.statusParameter
+        }
 
         return parameters
     }

@@ -17,6 +17,7 @@ final class CharacterListViewModel {
 
     private var totalPages = 1
     private var currentPage = 1
+    private var statusParam: CaracterStatus? = nil
     private let inputs: CharacterListInputs
     private var characters: [CharacterModel] = []
     private var indexPaths: [IndexPath] = []
@@ -37,7 +38,9 @@ final class CharacterListViewModel {
 
     func loadCharacterList() {
         isLoading = true
-        let parameter = CharacterListParameter(page: currentPage)
+        let parameter = CharacterListParameter(
+            page: currentPage,
+            status: statusParam)
         inputs.characterList.fetch(routing: parameter).observe(on: MainScheduler.instance).subscribe(
             onSuccess: { [weak self] response in
                 guard let strongSelf = self else { return }
@@ -68,6 +71,14 @@ final class CharacterListViewModel {
                 self?.isLoading = false
                 self?.coordinator?.showAlert(with: error.localizedDescription)
             }).disposed(by: disposeBag)
+    }
+
+    func hundleSegmentAction(with status: CaracterStatus?) {
+        statusParam = status
+        currentPage = 1
+        characters.removeAll()
+        indexPaths.removeAll()
+        loadCharacterList()
     }
 
     private func updateCells(with characters: [CharacterModel]) {
