@@ -21,8 +21,6 @@ final class CharacterListTableViewCell: UITableViewCell {
     @IBOutlet private weak var characterImageView: UIImageView!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet private weak var statusInfoLabel: UILabel!
-    @IBOutlet private weak var locationNameLabel: UILabel!
-    @IBOutlet weak var origineNameLabel: UILabel!
 
     var disposeBag = DisposeBag()
 
@@ -56,9 +54,7 @@ extension CharacterListTableViewCell: Setupable {
         nameLabel.text = model.name
         statusInfoLabel.text = model.statusInfo
         statusView.backgroundColor = model.characterStatusColor
-        locationNameLabel.text = model.locationName
-        origineNameLabel.text = model.origineName
-        
+
         guard let imageUrl = model.imageUrl else { return }
 
         DispatchQueue.main.async { [weak self] in

@@ -1,5 +1,5 @@
 # RickAndMorty
-A sample app which utilizes [Get all characters](rickandmortyapi.com/api/character) to display a user list.
+A sample app which utilizes [Get all characters](rickandmortyapi.com/api/character) to display a character list and detail screen with episode list.
 ### Architecture
 *MVVM (Model-View-ViewModel) + Coordinator
 

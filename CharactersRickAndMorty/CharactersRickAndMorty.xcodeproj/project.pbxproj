@@ -323,9 +323,8 @@
 		D0227B8F297583C80036D5C5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D088609A2977C76D00EEFE08 /* Utility */,
 				D0C317322976F97200DCF2BB /* JsoneRespones */,
-				D0227B90297583D80036D5C5 /* Constants.swift */,
-				D0227BCB2975C8E80036D5C5 /* Environment.swift */,
 				D0227BA3297585C80036D5C5 /* Extension */,
 			);
 			path = SupportingFiles;
@@ -466,6 +465,15 @@
 				D0227BCF2975C9C20036D5C5 /* CharacterListAssembly.swift */,
 			);
 			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		D088609A2977C76D00EEFE08 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D0227B90297583D80036D5C5 /* Constants.swift */,
+				D0227BCB2975C8E80036D5C5 /* Environment.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		D0B476DF29771B14008FACE2 /* Frameworks */ = {
