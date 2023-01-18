@@ -10,11 +10,14 @@ import UIKit
 enum Constants {
     enum API {
         case characterList
+        case characterDetail
 
         var path: String {
             switch self {
             case .characterList :
                 return "/api/character"
+            case .characterDetail :
+                return "/api/episode"
             }
         }
 
@@ -22,6 +25,8 @@ enum Constants {
             switch self {
             case .characterList:
                 return "CharacterList"
+            case .characterDetail:
+                return "CharacterDetail"
             }
         }
     }

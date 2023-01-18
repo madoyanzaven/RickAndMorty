@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 
 final class CharacterListTableViewController: UITableViewController {
+    // MARK: - Properties
     private let reuseIdentifier = "CharacterListTableViewCell"
     private lazy var segmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["All", "Alive", "Dead", "unknown"])
@@ -63,6 +64,10 @@ final class CharacterListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.pushToDetail(indexPath)
     }
 
     // MARK: - UIScrollViewDelegate

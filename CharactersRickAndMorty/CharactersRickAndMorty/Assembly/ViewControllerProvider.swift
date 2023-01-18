@@ -22,5 +22,16 @@ extension ViewControllerProvider {
 
             return vc
         }
+
+        static var detail: CharacterDetailTableViewController {
+            let assemblies: [Assembly] = [
+                CharacterDetailServiceAssembly(),
+                CharacterDetailAssembly()
+            ]
+            let assembler = Assembler(assemblies)
+            let vc = assembler.resolver.resolve(CharacterDetailTableViewController.self)!
+
+            return vc
+        }
     }
 }

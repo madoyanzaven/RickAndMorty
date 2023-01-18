@@ -5,7 +5,6 @@
 //  Created by Zaven Madoyan on 16.01.23.
 //
 
-import Foundation
 import UIKit
 
 struct CharacterModel {
@@ -15,7 +14,8 @@ struct CharacterModel {
     let species: String
     let location: Location?
     let origin: Origin?
-
+    let url: String
+    
     var imageUrl: URL? {
         if let imagePath = imagePath {
             return URL(string: String(imagePath))
@@ -33,11 +33,11 @@ struct CharacterModel {
         
         return caracterStatus.statusColor
     }
-
+    
     var locationName: String {
         return location?.name ?? ""
     }
-
+    
     var origineName: String {
         return origin?.name ?? ""
     }
@@ -66,16 +66,15 @@ enum CaracterStatus: String {
             return Constants.Colors.statusGray
         }
     }
-
+    
     var statusParameter: String {
         switch self {
         case .alive:
-        return "alive"
+            return "alive"
         case .daed:
             return "dead"
         case .unknown:
             return "unknown"
         }
     }
-
 }

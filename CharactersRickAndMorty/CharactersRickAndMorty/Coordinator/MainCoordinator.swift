@@ -20,6 +20,12 @@ final class MainCoordinator: Coordinating {
         navigationController.pushViewController(vc, animated: false)
     }
 
+    func pushToDetail(with model: CharacterModel) {
+        let detailVC = ViewControllerProvider.Main.detail
+        detailVC.setup(coordinator: self, charachterModel: model)
+        navigationController.pushViewController(detailVC, animated: true)
+    }
+
     func showAlert(with message: String) {
         let alert = UIAlertController(title: "Error",
                                       message: message, preferredStyle: .alert)

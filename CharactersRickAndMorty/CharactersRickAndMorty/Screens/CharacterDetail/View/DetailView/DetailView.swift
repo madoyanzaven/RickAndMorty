@@ -1,55 +1,30 @@
 //
-//  CharacterListTableViewCell.swift
+//  DetailView.swift
 //  CharactersRickAndMorty
 //
-//  Created by Zaven Madoyan on 16.01.23.
+//  Created by Zaven Madoyan on 18.01.23.
 //
 
 import UIKit
-import RxSwift
-import AlamofireImage
 
-protocol Setupable {
-    associatedtype SetupModel
-
-    func setup(with model: SetupModel)
-}
-
-final class CharacterListTableViewCell: UITableViewCell {
-    @IBOutlet private weak var cellContentView: UIView!
+final class DetailView: UIView {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var characterImageView: UIImageView!
-    @IBOutlet weak var statusView: UIView!
+    @IBOutlet private weak var statusView: UIView!
     @IBOutlet private weak var statusInfoLabel: UILabel!
     @IBOutlet private weak var locationNameLabel: UILabel!
-    @IBOutlet weak var origineNameLabel: UILabel!
-
-    var disposeBag = DisposeBag()
-
+    @IBOutlet private weak var origineNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         backgroundColor = Constants.Colors.mainGray
-        cellContentView.layer.cornerRadius = 8
-        cellContentView.clipsToBounds = true
         statusView.layer.cornerRadius = 5
         statusView.clipsToBounds = true
     }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-    }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-
-        disposeBag = DisposeBag()
-    }
 }
 
-extension CharacterListTableViewCell: Setupable {
+extension DetailView: Setupable {
     typealias SetupModel = CharacterModel
 
     func setup(with model: SetupModel) {
@@ -58,7 +33,7 @@ extension CharacterListTableViewCell: Setupable {
         statusView.backgroundColor = model.characterStatusColor
         locationNameLabel.text = model.locationName
         origineNameLabel.text = model.origineName
-        
+
         guard let imageUrl = model.imageUrl else { return }
 
         DispatchQueue.main.async { [weak self] in
@@ -66,3 +41,6 @@ extension CharacterListTableViewCell: Setupable {
         }
     }
 }
+
+
+

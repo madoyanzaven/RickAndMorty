@@ -47,14 +47,15 @@ final class CharacterListViewModel: CharacterListBusinessRules {
 
                 let models = response.results.map {
                     CharacterModel(
-                    name: $0.name ?? "",
-                    imagePath: $0.image,
-                    status: $0.status ?? "",
-                    species: $0.species ?? "",
-                    location: Location(
-                        name: $0.location?.name),
-                    origin: Origin(
-                        name: $0.origin?.name)
+                        name: $0.name ?? "",
+                        imagePath: $0.image,
+                        status: $0.status ?? "",
+                        species: $0.species ?? "",
+                        location: Location(
+                            name: $0.location?.name),
+                        origin: Origin(
+                            name: $0.origin?.name),
+                        url: $0.url ?? ""
                     )
                 }
                 strongSelf.totalPages = response.info.pages
@@ -81,6 +82,12 @@ final class CharacterListViewModel: CharacterListBusinessRules {
         loadCharacterList()
     }
 
+    func pushToDetail(_ indexPath: IndexPath) {
+        guard let selectedCharacter =
+                charactersModel[safe: indexPath.row] else { return }
+        coordinator.pushToDetail(with: selectedCharacter)
+    }
+    
     private func updateCells(with characters: [CharacterModel]) {
         indexPaths.removeAll()
         let oldCharacterCount = charactersModel.count
