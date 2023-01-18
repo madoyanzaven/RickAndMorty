@@ -40,6 +40,12 @@ final class CharacterDetailTableViewController: UITableViewController {
         viewModel.loadEpisodeList()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        setuptableHeaderViewFrame()
+    }
+
     // MARK: UITableViewDataSource & UITableViewDelegate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.episodesModel.count
@@ -61,10 +67,6 @@ final class CharacterDetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return heightForHeader
     }
-
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return detailView
-    }
     
     // MARK: Private methods
     private func setupDetailView() {
@@ -74,11 +76,27 @@ final class CharacterDetailTableViewController: UITableViewController {
 
     private func setupView() {
         title = viewModel.navigationTitle
+        view.backgroundColor = Constants.Colors.mainGray
+        tableView.separatorStyle = .none
+        tableView.tableHeaderView = detailView
+    }
+
+    private func setuptableHeaderViewFrame() {
+        if let headerView = tableView.tableHeaderView {
+            let height = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+            var headerFrame = headerView.frame
+
+            //Comparison necessary to avoid infinite loop
+            if height != headerFrame.size.height {
+                headerFrame.size.height = height
+                headerView.frame = headerFrame
+                tableView.tableHeaderView = headerView
+            }
+        }
     }
 
     private func registerTableView() {
         tableView.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
-        tableView.separatorStyle = .none
     }
     
     private func bind() {
