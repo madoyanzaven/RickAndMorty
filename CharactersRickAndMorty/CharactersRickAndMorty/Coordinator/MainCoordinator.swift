@@ -16,13 +16,15 @@ final class MainCoordinator: Coordinating {
 
     func start() {
         let vc = ViewControllerProvider.Main.list
-        vc.setupCoordinator(coordinator: self)
-        navigationController.pushViewController(vc, animated: false)
+
+        vc.viewModel.setupCoordinator(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
     }
 
     func pushToDetail(with model: CharacterModel) {
         let detailVC = ViewControllerProvider.Main.detail
-        detailVC.setup(coordinator: self, charachterModel: model)
+
+        detailVC.viewModel.setup(with: model, self)
         navigationController.pushViewController(detailVC, animated: true)
     }
 

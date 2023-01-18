@@ -12,16 +12,19 @@ import RxSwift
 final class CharacterListTableViewController: UITableViewController {
     // MARK: - Properties
     private let reuseIdentifier = "CharacterListTableViewCell"
+    private let heightForRowAt: CGFloat = 81
+    private let contentOffsetY: CGFloat = 50
+    private let segmentedControlItems = ["All", "Alive", "Dead", "unknown"]
     private lazy var segmentedControl: UISegmentedControl = {
-        let sc = UISegmentedControl(items: ["All", "Alive", "Dead", "unknown"])
+        let sc = UISegmentedControl(items: segmentedControlItems)
         sc.selectedSegmentIndex = 0
-        sc.tintColor = .systemBlue
-        sc.backgroundColor = Constants.Colors.mainGray
+        sc.tintColor = .systemGray
+        sc.backgroundColor = Constants.Colors.statusGray
         sc.addTarget(self, action: #selector(handleSegmentedControlSwitch(_:)), for: .valueChanged)
         return sc }()
 
     // MARK: - Dependencies
-    private let viewModel: CharacterListViewModel
+    let viewModel: CharacterListViewModel
     
     // MARK: - Initialization
     init(viewModel: CharacterListViewModel) {
@@ -33,13 +36,10 @@ final class CharacterListTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCoordinator(coordinator: MainCoordinator) {
-        viewModel.coordinator = coordinator
-    }
-    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupView()
         setupSegmentedControl()
         registerTableView()
@@ -63,7 +63,7 @@ final class CharacterListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 81
+        return heightForRowAt
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -138,7 +138,7 @@ final class CharacterListTableViewController: UITableViewController {
             if viewModel.pageNotOffset && !viewModel.isLoading {
                 viewModel.loadCharacterList()
                 UIView.animate(withDuration: 1) {
-                    self.tableView.contentOffset.y += 50
+                    self.tableView.contentOffset.y += self.contentOffsetY
                 }
             }
         }

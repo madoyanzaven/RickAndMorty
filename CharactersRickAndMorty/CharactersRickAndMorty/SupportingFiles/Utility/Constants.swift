@@ -39,8 +39,8 @@ extension Constants {
 }
 
 extension Constants {
-    enum Foundation {
-        static var limitPageCount = 10
+    enum Images {
+        static var noImage = UIImage(named: "noImage")
     }
 }
 

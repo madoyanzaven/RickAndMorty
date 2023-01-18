@@ -19,7 +19,7 @@ final class CharacterListTableViewCell: UITableViewCell {
     @IBOutlet private weak var cellContentView: UIView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var characterImageView: UIImageView!
-    @IBOutlet weak var statusView: UIView!
+    @IBOutlet private weak var statusView: UIView!
     @IBOutlet private weak var statusInfoLabel: UILabel!
 
     var disposeBag = DisposeBag()
@@ -56,9 +56,9 @@ extension CharacterListTableViewCell: Setupable {
         statusView.backgroundColor = model.characterStatusColor
 
         guard let imageUrl = model.imageUrl else { return }
-
-        DispatchQueue.main.async { [weak self] in
-            self?.characterImageView.af.setImage(withURL: imageUrl)
-        }
+        
+        characterImageView.af.setImage(
+            withURL: imageUrl,
+            placeholderImage: Constants.Images.noImage)
     }
 }

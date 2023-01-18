@@ -10,7 +10,7 @@ import RxSwift
 import RxRelay
 
 final class CharacterListViewModel: CharacterListBusinessRules {
-    weak var coordinator : MainCoordinator!
+    private weak var coordinator : MainCoordinator!
     let updatedIndexPathBehaviorRelay: BehaviorRelay<[IndexPath]?> = BehaviorRelay(value: nil)
     let disposeBag = DisposeBag()
     var isLoading = false
@@ -34,6 +34,11 @@ final class CharacterListViewModel: CharacterListBusinessRules {
 
     init(inputs: CharacterListInputs) {
         self.inputs = inputs
+    }
+
+
+    func setupCoordinator(coordinator: MainCoordinator) {
+        self.coordinator = coordinator
     }
 
     func loadCharacterList() {

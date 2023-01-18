@@ -15,8 +15,8 @@ final class CharacterDetailViewModel: CharacterDetailModelBusinessRules {
     let displayPublishRelay = PublishRelay<Void>()
     
     private let inputs: CharacterDetailInputs
-    private var selectedCharacter: CharacterModel!
     private var episodes: [EpisodeModel] = []
+    var selectedCharacter: CharacterModel?
     
     var navigationTitle: String {
         return "Character Detail"
@@ -30,8 +30,8 @@ final class CharacterDetailViewModel: CharacterDetailModelBusinessRules {
     }
 
     func setup(with model: CharacterModel, _ coordinator: MainCoordinator) {
-        self.coordinator = coordinator
         self.selectedCharacter = model
+        self.coordinator = coordinator
     }
     
     func loadEpisodeList() {

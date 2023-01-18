@@ -36,9 +36,9 @@ extension DetailView: Setupable {
 
         guard let imageUrl = model.imageUrl else { return }
 
-        DispatchQueue.main.async { [weak self] in
-            self?.characterImageView.af.setImage(withURL: imageUrl)
-        }
+        characterImageView.af.setImage(
+            withURL: imageUrl,
+            placeholderImage: Constants.Images.noImage)
     }
 }
 

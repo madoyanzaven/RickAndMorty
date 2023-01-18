@@ -17,7 +17,7 @@ final class CharacterDetailTableViewController: UITableViewController {
     private let heightForRow: CGFloat = 110
 
     // MARK: - Dependencies
-    private let viewModel: CharacterDetailViewModel
+    let viewModel: CharacterDetailViewModel
 
     // MARK: - Initialization
     init(viewModel: CharacterDetailViewModel) {
@@ -29,17 +29,12 @@ final class CharacterDetailTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - Setup
-    func setup(coordinator: MainCoordinator, charachterModel: CharacterModel) {
-        viewModel.setup(with: charachterModel, coordinator)
-        detailView.setup(with: charachterModel)
-    }
-
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
+        setupDetailView()
         registerTableView()
         bind()
         viewModel.loadEpisodeList()
@@ -72,6 +67,11 @@ final class CharacterDetailTableViewController: UITableViewController {
     }
     
     // MARK: Private methods
+    private func setupDetailView() {
+        guard let selectedModel = viewModel.selectedCharacter else { return }
+        detailView.setup(with: selectedModel)
+    }
+
     private func setupView() {
         title = viewModel.navigationTitle
     }
@@ -80,7 +80,7 @@ final class CharacterDetailTableViewController: UITableViewController {
         tableView.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         tableView.separatorStyle = .none
     }
-
+    
     private func bind() {
         viewModel.displayPublishRelay.bind { [weak self] _ in
             self?.tableView.reloadData()
