@@ -54,6 +54,7 @@
 		D0227BD02975C9C20036D5C5 /* CharacterListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0227BCF2975C9C20036D5C5 /* CharacterListAssembly.swift */; };
 		D08860952977AD5200EEFE08 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08860942977AD5200EEFE08 /* DetailView.swift */; };
 		D08860972977AE9D00EEFE08 /* UIView+LoadNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08860962977AE9D00EEFE08 /* UIView+LoadNib.swift */; };
+		D08860992977BEB700EEFE08 /* CharacterDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = D08860982977BEB700EEFE08 /* CharacterDetail.json */; };
 		D0B476DA297718C8008FACE2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D0B476D9297718C8008FACE2 /* RxCocoa */; };
 		D0B476DC297718C8008FACE2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D0B476DB297718C8008FACE2 /* RxRelay */; };
 		D0B476DE297718C8008FACE2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D0B476DD297718C8008FACE2 /* RxSwift */; };
@@ -153,6 +154,7 @@
 		D0227BCF2975C9C20036D5C5 /* CharacterListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListAssembly.swift; sourceTree = "<group>"; };
 		D08860942977AD5200EEFE08 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D08860962977AE9D00EEFE08 /* UIView+LoadNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadNib.swift"; sourceTree = "<group>"; };
+		D08860982977BEB700EEFE08 /* CharacterDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharacterDetail.json; sourceTree = "<group>"; };
 		D0B476E92977249C008FACE2 /* CharacterDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewCell.swift; sourceTree = "<group>"; };
 		D0B476EA2977249C008FACE2 /* CharacterDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailTableViewCell.xib; sourceTree = "<group>"; };
 		D0B476ED297724C9008FACE2 /* CharacterDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -553,6 +555,7 @@
 			isa = PBXGroup;
 			children = (
 				D0C317332976F9B800DCF2BB /* CharacterList.json */,
+				D08860982977BEB700EEFE08 /* CharacterDetail.json */,
 			);
 			path = JsoneRespones;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				D0227B4529757D080036D5C5 /* LaunchScreen.storyboard in Resources */,
 				D0B476EC2977249C008FACE2 /* CharacterDetailTableViewCell.xib in Resources */,
 				D0C3173E2977034D00DCF2BB /* CharacterList.json in Resources */,
+				D08860992977BEB700EEFE08 /* CharacterDetail.json in Resources */,
 				D0B477072977A98D008FACE2 /* DetailView.xib in Resources */,
 				D0227B4229757D080036D5C5 /* Assets.xcassets in Resources */,
 				D0227BB62975B8D50036D5C5 /* CharacterListTableViewCell.xib in Resources */,

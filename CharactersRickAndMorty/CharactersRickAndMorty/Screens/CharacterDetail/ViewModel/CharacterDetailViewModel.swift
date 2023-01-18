@@ -40,10 +40,7 @@ final class CharacterDetailViewModel: CharacterDetailModelBusinessRules {
             onSuccess: { [weak self] response in
                 guard let strongSelf = self else { return }
                 let allEpisodes = response.results.map {
-                    EpisodeModel(
-                        name: $0.name ?? "",
-                        episode: $0.episode ?? "",
-                        characters: $0.characters ?? [])
+                    strongSelf.convertToEpisodeModel($0)
                 }
                 strongSelf.episodes = strongSelf.filterEpisodes(allEpisodes, strongSelf.selectedCharacter)
                 strongSelf.displayPublishRelay.accept(())

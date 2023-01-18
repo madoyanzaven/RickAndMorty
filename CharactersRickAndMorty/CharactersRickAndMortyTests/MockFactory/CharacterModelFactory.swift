@@ -10,12 +10,22 @@ import Foundation
 @testable import CharactersRickAndMorty
 
 final class CharacterModelFactory {
-    static func create() -> CharactersRickAndMorty.CharacterModel {
-        return CharacterModel(name: "",
-                              imagePath: "",
-                              status: "",
-                              species: "",
-                              location: Location(name: ""),
-                              origin: Origin(name: ""))
+    static func create(id: Int,
+                       name: String = "",
+                       imagePath: String = "",
+                       status: String = "",
+                       species: String = "",
+                       location: Location = Location(name: ""),
+                       origin: Origin = Origin(name: ""),
+                       url: String = ""
+    ) -> CharactersRickAndMorty.CharacterModel {
+        return CharacterModel(id: id,
+                              name: name,
+                              imagePath: imagePath,
+                              status: status,
+                              species: species,
+                              location: location,
+                              origin: origin,
+                              url: url)
     }
 }

@@ -8,6 +8,7 @@
 import UIKit
 
 struct CharacterModel {
+    let id: Int
     let name: String
     let imagePath: String?
     let status: String

@@ -9,6 +9,7 @@ import Foundation
 
 protocol CharacterDetailModelBusinessRules {
     func filterEpisodes(_ episodes: [EpisodeModel], _ selectedCharacter: CharacterModel?) -> [EpisodeModel]
+    func convertToEpisodeModel(_ responseModel: EpisodeResponse) -> EpisodeModel
 }
 
 extension CharacterDetailModelBusinessRules {
@@ -17,5 +18,12 @@ extension CharacterDetailModelBusinessRules {
 
         return episodes.filter { $0.characters.contains(selectedCharacter.url)
         }
+    }
+    
+    func convertToEpisodeModel(_ responseModel: EpisodeResponse) -> EpisodeModel {
+        return EpisodeModel(
+            name: responseModel.name ?? "",
+            episode: responseModel.episode ?? "",
+            characters: responseModel.characters ?? [])
     }
 }

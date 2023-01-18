@@ -10,18 +10,28 @@ import Foundation
 @testable import CharactersRickAndMorty
 
 final class CharacterResponseFactory {
-    static func create() -> CharactersRickAndMorty.CharacterResponse {
-        return CharacterResponse(id: 1,
-                                 name: "",
-                                 status: "",
-                                 species: "",
-                                 type: "",
-                                 gender: "",
-                                 image: "",
-                                 url: nil,
-                                 createdData: nil,
-                                 location: nil,
-                                 origin: nil)
-
+    static func create(id: Int = 1,
+                       name: String = "",
+                       status: String = "",
+                       species: String = "",
+                       type: String = "",
+                       gender: String = "",
+                       image: String = "",
+                       url: String? = nil,
+                       createdData: String? = nil,
+                       location: LocationResponse? = nil,
+                       origin: OriginResponse? = nil) -> CharactersRickAndMorty.CharacterResponse {
+        return CharacterResponse(id: id,
+                                 name: name,
+                                 status: status,
+                                 species: species,
+                                 type: type,
+                                 gender: gender,
+                                 image: image,
+                                 url: url,
+                                 createdData: createdData,
+                                 location: location,
+                                 origin: origin)
+        
     }
 }

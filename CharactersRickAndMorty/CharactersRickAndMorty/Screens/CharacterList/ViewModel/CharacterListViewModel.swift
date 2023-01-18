@@ -46,17 +46,7 @@ final class CharacterListViewModel: CharacterListBusinessRules {
                 guard let strongSelf = self else { return }
 
                 let models = response.results.map {
-                    CharacterModel(
-                        name: $0.name ?? "",
-                        imagePath: $0.image,
-                        status: $0.status ?? "",
-                        species: $0.species ?? "",
-                        location: Location(
-                            name: $0.location?.name),
-                        origin: Origin(
-                            name: $0.origin?.name),
-                        url: $0.url ?? ""
-                    )
+                    strongSelf.convertToCharacterModel($0)
                 }
                 strongSelf.totalPages = response.info.pages
                 strongSelf.isLoading = false
